@@ -1,0 +1,12 @@
+External Documentation 
+In Lab 1, I’ve created a program that has 4 threads for each worker and confirmed I have a main thread. 
+In the Plant.java we implement Runnable and have 4 threads that take each operation one at 
+a time (per thread) to run a process on an orange untill the State of 
+the Orange changes to the next State, once the final state is reach the orange is discards as at 
+the point it’s just scraps. After the time has run out for working on the 
+oranges, the program will print out a summary of the oranges processed, 
+the oranges wasted, oranges bottled, and the provided oranges. In my 
+implementation, I’ve decided to have two threads do two of the process 
+and two of the threads do the other two, which allowed me to reach the requirements. I experience a lot of challenges with syncing my 
+threads to split and do task parallelization. I also struggled with the assignment to just understand the complex logic and 
+complexity of the multithreaded program.

@@ -149,7 +149,6 @@ public class Plant implements Runnable {
     }
 
     // method for bottling the orange, runs process till orange isn't Squeezed state
-
     private void orangeBottle(Orange o) {
         while (o.getState() == Orange.State.Squeezed) {
             o.runProcess();

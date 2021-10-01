@@ -149,7 +149,7 @@ public class Plant implements Runnable {
     }
 
     // method for bottling the orange, runs process till orange isn't Squeezed state
-    private void orangeBottle(Orange o) {
+    public void orangeBottle(Orange o) {
         while (o.getState() == Orange.State.Squeezed) {
             o.runProcess();
             bottledOranges.add(o);
@@ -157,7 +157,7 @@ public class Plant implements Runnable {
     }
 
     // method finishes processing the orange and throws it away as its scraps
-    private void orangeProcess(Orange o) {
+    public void orangeProcess(Orange o) {
         while (o.getState() == Orange.State.Bottled) {
             o.runProcess();
         }

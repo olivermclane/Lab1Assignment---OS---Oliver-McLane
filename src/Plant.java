@@ -179,8 +179,13 @@ public class Plant implements Runnable {
         return orangesProcessed / ORANGES_PER_BOTTLE;
     }
 
-    // returns the total oranges that didn't finish processing
+    // returns the total oranges that didn't finish processing & any oranges that couldnt fit into the bottles.
     public int getWaste() {
-        return orangesProvided - orangesProcessed;
+        int totalWaste = 0;
+        totalWaste = orangesProvided - orangesProcessed;
+
+        totalWaste += orangesProcessed % ORANGES_PER_BOTTLE;
+        
+        return totalWaste;
     }
 }
